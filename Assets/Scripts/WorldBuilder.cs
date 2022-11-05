@@ -27,6 +27,7 @@ public class WorldBuilder : MonoBehaviour
     [SerializeField] private GameObject menu;
     [SerializeField] private Text timeText;
     [SerializeField] private Text numberAttempts;
+    
     void Start()
     {
         attempts++;
@@ -80,6 +81,7 @@ public class WorldBuilder : MonoBehaviour
                     secondExist = true;
                 }
             }
+            
             if (firstExist)
             {
                 if (tunnelInstantiated.transform.position.z < -58)
@@ -100,17 +102,20 @@ public class WorldBuilder : MonoBehaviour
                     }
                 }
             }
+            
             if (newLine)
                 CreateLine();
         }
+        
         if (SphereController.dead)
         {
             menu.SetActive(true);
             time = (int)time;
-            timeText.text = ("Âðåìÿ ïîñëåäíåé ïîïûòêè: " + time.ToString() + " ñåêóíä");
-            numberAttempts.text = ("Êîëè÷åñòâî ïîïûòîê: " + attempts.ToString());
+            timeText.text = ("Ã‚Ã°Ã¥Ã¬Ã¿ Ã¯Ã®Ã±Ã«Ã¥Ã¤Ã­Ã¥Ã© Ã¯Ã®Ã¯Ã»Ã²ÃªÃ¨: " + time.ToString() + " Ã±Ã¥ÃªÃ³Ã­Ã¤");
+            numberAttempts.text = ("ÃŠÃ®Ã«Ã¨Ã·Ã¥Ã±Ã²Ã¢Ã® Ã¯Ã®Ã¯Ã»Ã²Ã®Ãª: " + attempts.ToString());
         }
     }
+    
     public void CreateLine()
     {
         float k = Random.Range(0, 7.18f);
