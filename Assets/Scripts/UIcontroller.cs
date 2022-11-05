@@ -10,14 +10,17 @@ public class UIcontroller : MonoBehaviour
     {
         speed = 5;
     }
+    
     public void MediumDifficult()
     {
         speed = 10;
     }
+    
     public void HighDifficult()
     {
         speed = 15;
     }
+    
     public void StartButton()
     {
         if (speed >= 5)
