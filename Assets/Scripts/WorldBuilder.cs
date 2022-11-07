@@ -111,8 +111,8 @@ public class WorldBuilder : MonoBehaviour
         {
             menu.SetActive(true);
             time = (int)time;
-            timeText.text = ("Âðåìÿ ïîñëåäíåé ïîïûòêè: " + time.ToString() + " ñåêóíä");
-            numberAttempts.text = ("Êîëè÷åñòâî ïîïûòîê: " + attempts.ToString());
+            timeText.text = ("Last attempt time: " + time.ToString() + " seconds");
+            numberAttempts.text = ("Еotal attempts: " + attempts.ToString());
         }
     }
     
